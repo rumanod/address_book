@@ -83,3 +83,7 @@ Run the laravel development server
 
     php artisan serve
     ./vendor/bin/phpunit
+    
+ ----------
+
+# Completion: 7 hours
