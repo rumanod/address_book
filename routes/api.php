@@ -25,7 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('person/{name}', [AddressBookController::class, 'getPerson']);
 Route::get('personemail/{email}', [AddressBookController::class, 'getPersonEmail']);
 Route::get('persongroup/{groupname}', [AddressBookController::class, 'getPeopleGroup']);
-Route::get('groupsperson/{groupname}', [AddressBookController::class, 'getGroupsPerson']);
+Route::get('groupsperson/{peopleid}', [AddressBookController::class, 'getGroupsPerson']);
 
 
 Route::post('person', [AddressBookController::class, 'createPerson']);

@@ -130,11 +130,11 @@ class AddressBookController extends Controller
     }
 
     //Gets all the groups a person belongs to
-    public function getGroupsPerson($userid) {
+    public function getGroupsPerson($people_id) {
 
-        if (!empty($userid)) {
+        if (!empty($people_id)) {
 
-            $groupids = AddressBook::where([['people_id', $userid], ['group_id', '>', 0]])->pluck('group_id');
+            $groupids = AddressBook::where([['people_id', $people_id], ['group_id', '>', 0]])->pluck('group_id');
 
             if (!empty($groupids)) {
                 return Groups::whereIn('id', $groupids)->pluck('id');
